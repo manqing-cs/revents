@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, Link} from 'react';
 import {Segment, Header, Form, Button } from 'semantic-ui-react';
 import cuid from 'cuid';
 
@@ -90,7 +90,8 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
                   />
                 </Form.Field>
                 <Button type='submit' floated='right' positive content ='Submit' /> 
-                <Button onClick={() => setFormOpen(false)}
+                <Button 
+                 as={Link} to='/events'
                  type='submit' 
                  floated='right' 
                  content ='Cancel' 
